@@ -23,8 +23,8 @@ export function SignInEmailPassword() {
   const form = useForm({
     resolver: zodResolver(EmailPasswordSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: 'hello@gmail.com',
+      password: 'long837018',
     },
   });
 

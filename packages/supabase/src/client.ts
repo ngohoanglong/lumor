@@ -5,9 +5,10 @@ import { Platform } from 'react-native';
 import { z } from 'zod';
 
 import { Database } from './database.types';
-import { LargeSecureStore } from './large-secure-store';
+// import { LargeSecureStore } from './large-secure-store';
 
-const storage = Platform.OS === 'web' ? AsyncStorage : new LargeSecureStore();
+// const storage = Platform.OS === 'web' ? AsyncStorage : new LargeSecureStore();
+const storage = AsyncStorage
 
 const { supabaseUrl, supabaseAnonKey } = z
   .object({

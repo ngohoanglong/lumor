@@ -7,6 +7,9 @@
     "icon": "./assets/images/icon.png",
     "scheme": "com.supabase",
     "userInterfaceStyle": "automatic",
+    "permissions": [
+      "mediaLibrary"
+    ],
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/splash.png",
@@ -14,6 +17,13 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Give us permission to access your photos",
+        "NSPhotoLibraryAddUsageDescription": "Give us permission to save photos",
+        "NSCameraUsageDescription": "Give us permission to use your camera",
+        "NSMicrophoneUsageDescription": "Give us permission to use your microphone",
+        "NSLocationWhenInUseUsageDescription": "Give us permission to use your location"
+      },
       "supportsTablet": true,
       "bundleIdentifier": "com.expo.expo-app"
     },
@@ -37,6 +47,14 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
         }
       ]
     ],
